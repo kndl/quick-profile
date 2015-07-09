@@ -53,11 +53,19 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func signUpTapped(sender: AnyObject) {
+    @IBAction func buttonTapped(sender: AnyObject) {
+        if isEditProfile() {
+            saveProfile()
+        } else {
+            signUp()
+        }
+    }
+    
+    func signUp() {
         let profile = Profile(username: usernameTextField.text,
-                    password: passwordTextField.text,
-                    firstName: firstNameTextField.text,
-                    lastName: lastNameTextField.text
+            password: passwordTextField.text,
+            firstName: firstNameTextField.text,
+            lastName: lastNameTextField.text
         )
         
         if (passwordsMatch() && profile.valid()) {
@@ -69,8 +77,21 @@ class RegistrationViewController: UIViewController {
         }
     }
     
+    func saveProfile() {
+        profile.username = usernameTextField.text
+        profile.firstName = firstNameTextField.text
+        profile.lastName = lastNameTextField.text
+        if (profile.valid()) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Username must not be blank", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
     func passwordsMatch() -> Bool {
-        return passwordTextField.text == confirmPasswordTextField.text
+        return passwordTextField.text == confirmPasswordTextField.text || self.isEditProfile()
     }
     
     func navigateToProfile(profile: Profile) {

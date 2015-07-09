@@ -9,6 +9,11 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    override var nibName : String {
+        get {
+            return "RegistrationViewController"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

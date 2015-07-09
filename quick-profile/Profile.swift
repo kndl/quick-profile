@@ -9,9 +9,12 @@
 import UIKit
 
 class Profile: NSObject {
-    var username, password, firstName, lastName : String
+    var username: String
+    var password: String
+    var firstName: String!
+    var lastName: String!
     
-    init(username: String, password: String, firstName: String, lastName: String) {
+    init(username: String, password: String, firstName: String!, lastName: String!) {
         self.username = username
         self.password = password
         self.firstName = firstName

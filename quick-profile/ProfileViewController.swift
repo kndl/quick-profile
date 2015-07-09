@@ -57,6 +57,8 @@ class ProfileViewController: UIViewController {
     }
     
     func editProfile(sender: AnyObject) {
-        
+        let controller = RegistrationViewController(profile: profile)
+        let editNavController = UINavigationController(rootViewController: controller)
+        navigationController?.presentViewController(editNavController, animated: true, completion: nil)
     }
 }

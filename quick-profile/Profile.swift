@@ -9,5 +9,17 @@
 import UIKit
 
 class Profile: NSObject {
-   
+    var username, password, firstName, lastName : String
+    
+    init(username : String, password : String, firstName : String, lastName : String) {
+        self.username = username
+        self.password = password
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init()
+    }
+    
+    func valid() -> Bool {
+        return !username.isEmpty && !password.isEmpty
+    }
 }

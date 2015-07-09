@@ -14,6 +14,11 @@ class RegistrationViewController: UIViewController {
             return "RegistrationViewController"
         }
     }
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,25 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func signUpTapped(sender: AnyObject) {
+        let profile = Profile(username: usernameTextField.text,
+                    password: passwordTextField.text,
+                    firstName: firstNameTextField.text,
+                    lastName: lastNameTextField.text
+        )
+        
+        if (passwordsMatch() && profile.valid()) {
+            signUp(profile)
+        }
+    }
+    
+    func passwordsMatch() -> Bool {
+        return passwordTextField.text == confirmPasswordTextField.text
+    }
+    
+    func signUp(profile : Profile) {
 
+    }
+    
 }
 

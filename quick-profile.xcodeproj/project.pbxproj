@@ -15,6 +15,8 @@
 		EB48A6331B4ED32F004632CC /* quick_profileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A6321B4ED32F004632CC /* quick_profileTests.swift */; };
 		EB48A63D1B4ED3BD004632CC /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48A63C1B4ED3BD004632CC /* RegistrationViewController.xib */; };
 		EB48A63F1B4ED987004632CC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A63E1B4ED987004632CC /* Profile.swift */; };
+		EB48A6441B4EDED0004632CC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A6421B4EDED0004632CC /* ProfileViewController.swift */; };
+		EB48A6451B4EDED0004632CC /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48A6431B4EDED0004632CC /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		EB48A6321B4ED32F004632CC /* quick_profileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_profileTests.swift; sourceTree = "<group>"; };
 		EB48A63C1B4ED3BD004632CC /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		EB48A63E1B4ED987004632CC /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		EB48A6421B4EDED0004632CC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EB48A6431B4EDED0004632CC /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 			children = (
 				EB48A61E1B4ED32F004632CC /* RegistrationViewController.swift */,
 				EB48A63C1B4ED3BD004632CC /* RegistrationViewController.xib */,
+				EB48A6421B4EDED0004632CC /* ProfileViewController.swift */,
+				EB48A6431B4EDED0004632CC /* ProfileViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				EB48A6221B4ED32F004632CC /* Main.storyboard in Resources */,
 				EB48A63D1B4ED3BD004632CC /* RegistrationViewController.xib in Resources */,
 				EB48A6271B4ED32F004632CC /* LaunchScreen.xib in Resources */,
+				EB48A6451B4EDED0004632CC /* ProfileViewController.xib in Resources */,
 				EB48A6241B4ED32F004632CC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +244,7 @@
 			files = (
 				EB48A61F1B4ED32F004632CC /* RegistrationViewController.swift in Sources */,
 				EB48A63F1B4ED987004632CC /* Profile.swift in Sources */,
+				EB48A6441B4EDED0004632CC /* ProfileViewController.swift in Sources */,
 				EB48A61D1B4ED32F004632CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

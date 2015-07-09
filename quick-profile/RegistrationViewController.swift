@@ -27,6 +27,8 @@ class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
+    // MARK: Les Initializers
+    
     convenience init(profile: Profile) {
         self.init(nibName: nil, bundle: nil)
         self.profile = profile
@@ -43,6 +45,8 @@ class RegistrationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Le Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
@@ -52,7 +56,37 @@ class RegistrationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Le Management Des Views
+    
+    func configureView() {
+        if (isEditProfile()) {
+            passwordTextField.removeFromSuperview()
+            confirmPasswordTextField.removeFromSuperview()
+            passwordLabel.removeFromSuperview()
+            confirmPasswordLabel.removeFromSuperview()
+            button.setTitle("Save", forState: UIControlState.Normal)
+            
+            usernameTextField.text = profile.username
+            firstNameTextField.text = profile.firstName
+            lastNameTextField.text = profile.lastName
+        }
+    }
+    
+    func emptyFields() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
+        firstNameTextField.text = ""
+        lastNameTextField.text = ""
+    }
+    
+    func isEditProfile() -> Bool {
+        return profile != nil
+    }
 
+    // MARK: Les Actions
+    
     @IBAction func buttonTapped(sender: AnyObject) {
         if isEditProfile() {
             saveProfile()
@@ -105,31 +139,4 @@ class RegistrationViewController: UIViewController {
         presentingNavController!.popToRootViewControllerAnimated(false)
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func emptyFields() {
-        usernameTextField.text = ""
-        passwordTextField.text = ""
-        confirmPasswordTextField.text = ""
-        firstNameTextField.text = ""
-        lastNameTextField.text = ""
-    }
-    
-    func isEditProfile() -> Bool {
-        return profile != nil
-    }
-    
-    func configureView() {
-        if (isEditProfile()) {
-            passwordTextField.removeFromSuperview()
-            confirmPasswordTextField.removeFromSuperview()
-            passwordLabel.removeFromSuperview()
-            confirmPasswordLabel.removeFromSuperview()
-            button.setTitle("Save", forState: UIControlState.Normal)
-            
-            usernameTextField.text = profile.username
-            firstNameTextField.text = profile.firstName
-            lastNameTextField.text = profile.lastName
-        }
-    }
 }
-

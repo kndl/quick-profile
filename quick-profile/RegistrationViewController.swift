@@ -15,7 +15,12 @@ class RegistrationViewController: UIViewController {
         }
     }
     
-    var profile : Profile!
+    var profile: Profile!
+    var isEditProfile: Bool {
+        get {
+            return profile != nil
+        }
+    }
     
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
@@ -60,7 +65,7 @@ class RegistrationViewController: UIViewController {
     // MARK: Le Management Des Views
     
     func configureView() {
-        if (isEditProfile()) {
+        if (isEditProfile) {
             passwordTextField.removeFromSuperview()
             confirmPasswordTextField.removeFromSuperview()
             passwordLabel.removeFromSuperview()
@@ -81,14 +86,10 @@ class RegistrationViewController: UIViewController {
         lastNameTextField.text = ""
     }
     
-    func isEditProfile() -> Bool {
-        return profile != nil
-    }
-
     // MARK: Les Actions
     
     @IBAction func buttonTapped(sender: AnyObject) {
-        if isEditProfile() {
+        if (isEditProfile) {
             saveProfile()
         } else {
             signUp()
@@ -125,7 +126,7 @@ class RegistrationViewController: UIViewController {
     }
     
     func passwordsMatch() -> Bool {
-        return passwordTextField.text == confirmPasswordTextField.text || self.isEditProfile()
+        return passwordTextField.text == confirmPasswordTextField.text || self.isEditProfile
     }
     
     func navigateToProfile(profile: Profile) {

@@ -27,6 +27,7 @@ class RegistrationViewController: UIViewController {
         self.init(nibName: nil, bundle: nil)
         self.profile = profile
         self.title = "Edit Profile"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logout:")
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -71,7 +72,21 @@ class RegistrationViewController: UIViewController {
     func navigateToProfile(profile: Profile) {
         let controller = ProfileViewController(profile: profile)
         navigationController?.pushViewController(controller, animated: true)
+        emptyFields()
     }
     
+    func logout(sender: AnyObject) {
+        let presentingNavController = navigationController?.presentingViewController as? UINavigationController
+        presentingNavController!.popToRootViewControllerAnimated(false)
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func emptyFields() {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
+        firstNameTextField.text = ""
+        lastNameTextField.text = ""
+    }
 }
 

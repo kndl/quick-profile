@@ -81,14 +81,13 @@
 		EB48A6191B4ED32F004632CC /* quick-profile */ = {
 			isa = PBXGroup;
 			children = (
+				EB48A6401B4EDE86004632CC /* Model */,
+				EB48A6411B4EDE91004632CC /* Controller */,
 				EB48A61C1B4ED32F004632CC /* AppDelegate.swift */,
-				EB48A61E1B4ED32F004632CC /* RegistrationViewController.swift */,
-				EB48A63C1B4ED3BD004632CC /* RegistrationViewController.xib */,
 				EB48A6201B4ED32F004632CC /* Main.storyboard */,
 				EB48A6231B4ED32F004632CC /* Images.xcassets */,
 				EB48A6251B4ED32F004632CC /* LaunchScreen.xib */,
 				EB48A61A1B4ED32F004632CC /* Supporting Files */,
-				EB48A63E1B4ED987004632CC /* Profile.swift */,
 			);
 			path = "quick-profile";
 			sourceTree = "<group>";
@@ -116,6 +115,23 @@
 				EB48A6311B4ED32F004632CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB48A6401B4EDE86004632CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB48A63E1B4ED987004632CC /* Profile.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB48A6411B4EDE91004632CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB48A61E1B4ED32F004632CC /* RegistrationViewController.swift */,
+				EB48A63C1B4ED3BD004632CC /* RegistrationViewController.xib */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

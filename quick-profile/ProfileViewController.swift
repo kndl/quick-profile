@@ -44,6 +44,11 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         updateLabels()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        updateLabels()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

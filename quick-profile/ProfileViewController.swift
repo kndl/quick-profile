@@ -25,6 +25,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var firstNameLable: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     
+    // MARK: Le Initialization
+    
     convenience init(profile: Profile!) {
         self.init(nibName: nil, bundle: nil)
         self.profile = profile
@@ -39,6 +41,8 @@ class ProfileViewController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: Le Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +59,15 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Les Helpers
+    
     func updateLabels() {
         usernameLabel.text = profile.username
         firstNameLable.text = profile.firstName
         lastNameLabel.text = profile.lastName
     }
+    
+    // MARK: Les Actions
     
     func editProfile(sender: AnyObject) {
         let controller = RegistrationViewController(profile: profile)

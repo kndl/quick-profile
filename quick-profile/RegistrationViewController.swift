@@ -17,12 +17,16 @@ class RegistrationViewController: UIViewController {
     
     var profile : Profile!
     
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
 
+    @IBOutlet weak var button: UIButton!
+    
     convenience init(profile: Profile) {
         self.init(nibName: nil, bundle: nil)
         self.profile = profile
@@ -41,7 +45,7 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +91,24 @@ class RegistrationViewController: UIViewController {
         confirmPasswordTextField.text = ""
         firstNameTextField.text = ""
         lastNameTextField.text = ""
+    }
+    
+    func isEditProfile() -> Bool {
+        return profile != nil
+    }
+    
+    func configureView() {
+        if (isEditProfile()) {
+            passwordTextField.removeFromSuperview()
+            confirmPasswordTextField.removeFromSuperview()
+            passwordLabel.removeFromSuperview()
+            confirmPasswordLabel.removeFromSuperview()
+            button.setTitle("Save", forState: UIControlState.Normal)
+            
+            usernameTextField.text = profile.username
+            firstNameTextField.text = profile.firstName
+            lastNameTextField.text = profile.lastName
+        }
     }
 }
 

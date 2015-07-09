@@ -6,9 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="quick_profile" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="40U-or-NKt" id="Y7z-Zr-kGZ"/>
+                <outlet property="confirmPasswordLabel" destination="qA0-N9-W9G" id="jUx-l5-uDu"/>
                 <outlet property="confirmPasswordTextField" destination="Bhh-VZ-QxQ" id="dwt-Km-Uwt"/>
                 <outlet property="firstNameTextField" destination="6Rp-Jy-EyZ" id="6ox-e0-jUN"/>
                 <outlet property="lastNameTextField" destination="HWX-Zw-dAS" id="Ptg-od-7OA"/>
+                <outlet property="passwordLabel" destination="OIu-Er-Fu0" id="9KR-pM-wyd"/>
                 <outlet property="passwordTextField" destination="ead-gt-iYh" id="ZJP-aq-YPS"/>
                 <outlet property="usernameTextField" destination="d0c-h1-vo9" id="yNV-0y-9XM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wdq-Ou-O37"/>
@@ -94,21 +97,28 @@
                 <constraint firstItem="k91-9r-GbO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="81" id="1e3-2U-7c8"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="trailing" secondItem="d0c-h1-vo9" secondAttribute="trailing" id="3M8-5X-t5t"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="leading" secondItem="k91-9r-GbO" secondAttribute="leading" id="3np-mj-jOG"/>
+                <constraint firstItem="svZ-MQ-pYV" firstAttribute="trailing" secondItem="fIh-BL-eWE" secondAttribute="trailing" id="6ZR-Fz-obh"/>
                 <constraint firstItem="k91-9r-GbO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6jD-08-FNZ"/>
+                <constraint firstItem="fIh-BL-eWE" firstAttribute="leading" secondItem="k91-9r-GbO" secondAttribute="leading" id="87A-Z5-r6o"/>
                 <constraint firstItem="6Rp-Jy-EyZ" firstAttribute="top" secondItem="Bhh-VZ-QxQ" secondAttribute="bottom" constant="8" id="8DU-hf-UOi"/>
                 <constraint firstItem="HWX-Zw-dAS" firstAttribute="trailing" secondItem="40U-or-NKt" secondAttribute="trailing" id="8aK-zx-040"/>
+                <constraint firstItem="6Rp-Jy-EyZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="d0c-h1-vo9" secondAttribute="bottom" constant="8" id="9dj-iS-zyJ"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="leading" secondItem="6Rp-Jy-EyZ" secondAttribute="leading" id="9i2-JD-zjb"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="trailing" secondItem="OIu-Er-Fu0" secondAttribute="trailing" id="9qu-VU-RoM"/>
                 <constraint firstItem="HWX-Zw-dAS" firstAttribute="top" secondItem="6Rp-Jy-EyZ" secondAttribute="bottom" constant="8" id="AiX-hb-vKY"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="leading" secondItem="fIh-BL-eWE" secondAttribute="leading" id="Bt0-2k-fVT"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="leading" secondItem="OIu-Er-Fu0" secondAttribute="leading" id="Dva-sR-MJc"/>
+                <constraint firstItem="fIh-BL-eWE" firstAttribute="trailing" secondItem="k91-9r-GbO" secondAttribute="trailing" id="Efg-ur-zV2"/>
                 <constraint firstItem="HWX-Zw-dAS" firstAttribute="centerY" secondItem="fIh-BL-eWE" secondAttribute="centerY" constant="0.5" id="HlB-PH-wOO"/>
+                <constraint firstItem="svZ-MQ-pYV" firstAttribute="leading" secondItem="fIh-BL-eWE" secondAttribute="leading" id="K7u-lv-ryi"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="top" secondItem="d0c-h1-vo9" secondAttribute="bottom" constant="8" id="Mjg-0A-Agt"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="leading" secondItem="Bhh-VZ-QxQ" secondAttribute="leading" id="NGi-fa-1qL"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="trailing" secondItem="fIh-BL-eWE" secondAttribute="trailing" id="Oe8-rp-wt9"/>
+                <constraint firstItem="HWX-Zw-dAS" firstAttribute="trailing" secondItem="d0c-h1-vo9" secondAttribute="trailing" id="Ogg-sS-hRe"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="trailing" secondItem="svZ-MQ-pYV" secondAttribute="trailing" id="Pjl-ni-U8z"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="trailing" secondItem="HWX-Zw-dAS" secondAttribute="trailing" id="Qrh-n4-B9X"/>
                 <constraint firstItem="qA0-N9-W9G" firstAttribute="leading" secondItem="svZ-MQ-pYV" secondAttribute="leading" id="RNc-MV-TC0"/>
+                <constraint firstItem="d0c-h1-vo9" firstAttribute="leading" secondItem="6Rp-Jy-EyZ" secondAttribute="leading" id="WNK-jV-W1Z"/>
                 <constraint firstItem="40U-or-NKt" firstAttribute="leading" secondItem="fIh-BL-eWE" secondAttribute="leading" id="Ydm-hE-LuH"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="centerY" secondItem="OIu-Er-Fu0" secondAttribute="centerY" constant="0.5" id="ZpK-W2-LNu"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="trailing" secondItem="6Rp-Jy-EyZ" secondAttribute="trailing" id="ZuR-rQ-i0l"/>
@@ -118,12 +128,20 @@
                 <constraint firstItem="Bhh-VZ-QxQ" firstAttribute="centerY" secondItem="qA0-N9-W9G" secondAttribute="centerY" constant="0.5" id="gBb-Wm-Yq7"/>
                 <constraint firstItem="Bhh-VZ-QxQ" firstAttribute="top" secondItem="ead-gt-iYh" secondAttribute="bottom" constant="8" id="jgz-xp-bBk"/>
                 <constraint firstItem="svZ-MQ-pYV" firstAttribute="centerY" secondItem="6Rp-Jy-EyZ" secondAttribute="centerY" constant="-0.5" id="l3P-Sw-43o"/>
+                <constraint firstItem="HWX-Zw-dAS" firstAttribute="leading" secondItem="d0c-h1-vo9" secondAttribute="leading" id="lwM-79-5c5"/>
+                <constraint firstItem="d0c-h1-vo9" firstAttribute="trailing" secondItem="6Rp-Jy-EyZ" secondAttribute="trailing" id="mwV-2A-0OY"/>
                 <constraint firstItem="d0c-h1-vo9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="77" id="nnb-1Z-ols"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="leading" secondItem="d0c-h1-vo9" secondAttribute="leading" id="otd-bk-A7v"/>
                 <constraint firstItem="ead-gt-iYh" firstAttribute="leading" secondItem="HWX-Zw-dAS" secondAttribute="leading" id="s9e-FG-GoJ"/>
                 <constraint firstItem="d0c-h1-vo9" firstAttribute="leading" secondItem="k91-9r-GbO" secondAttribute="trailing" constant="8" id="vdm-iY-ei8"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Qrh-n4-B9X"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="204" y="293"/>
         </view>
     </objects>
 </document>

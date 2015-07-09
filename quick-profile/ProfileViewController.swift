@@ -9,11 +9,40 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    override var nibName : String {
+        get {
+            return "ProfileViewController"
+        }
+    }
+    
+    var profile: Profile! {
+        didSet {
+            updateLabels()
+        }
+    }
+
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var firstNameLable: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    convenience init(profile: Profile!) {
+        self.init(nibName: nil, bundle: nil)
+        self.profile = profile
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.title = "Profile"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: self, action: "editProfile:")
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +50,13 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateLabels() {
+        usernameLabel.text = profile.username
+        firstNameLable.text = profile.firstName
+        lastNameLabel.text = profile.lastName
     }
-    */
-
+    
+    func editProfile(sender: AnyObject) {
+        
+    }
 }

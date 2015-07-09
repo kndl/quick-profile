@@ -39,6 +39,10 @@ class RegistrationViewController: UIViewController {
         
         if (passwordsMatch() && profile.valid()) {
             signUp(profile)
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Password must match, and username and password must not be blank.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
         }
     }
     

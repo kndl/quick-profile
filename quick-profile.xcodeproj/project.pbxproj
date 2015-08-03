@@ -184,6 +184,7 @@
 		EB48A60F1B4ED32F004632CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = kndl;
 				TargetAttributes = {
@@ -443,6 +444,7 @@
 				EB48A6381B4ED32F004632CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB48A6391B4ED32F004632CC /* Build configuration list for PBXNativeTarget "quick-profileTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +453,7 @@
 				EB48A63B1B4ED32F004632CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB48A61D1B4ED32F004632CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A61C1B4ED32F004632CC /* AppDelegate.swift */; };
 		EB48A61F1B4ED32F004632CC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A61E1B4ED32F004632CC /* RegistrationViewController.swift */; };
-		EB48A6221B4ED32F004632CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB48A6201B4ED32F004632CC /* Main.storyboard */; };
 		EB48A6241B4ED32F004632CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB48A6231B4ED32F004632CC /* Images.xcassets */; };
 		EB48A6271B4ED32F004632CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB48A6251B4ED32F004632CC /* LaunchScreen.xib */; };
 		EB48A6331B4ED32F004632CC /* quick_profileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB48A6321B4ED32F004632CC /* quick_profileTests.swift */; };
@@ -34,7 +33,6 @@
 		EB48A61B1B4ED32F004632CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB48A61C1B4ED32F004632CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB48A61E1B4ED32F004632CC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		EB48A6211B4ED32F004632CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB48A6231B4ED32F004632CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB48A6261B4ED32F004632CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB48A62C1B4ED32F004632CC /* quick-profileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-profileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 				EB48A6401B4EDE86004632CC /* Model */,
 				EB48A6411B4EDE91004632CC /* Controller */,
 				EB48A61C1B4ED32F004632CC /* AppDelegate.swift */,
-				EB48A6201B4ED32F004632CC /* Main.storyboard */,
 				EB48A6231B4ED32F004632CC /* Images.xcassets */,
 				EB48A6251B4ED32F004632CC /* LaunchScreen.xib */,
 				EB48A61A1B4ED32F004632CC /* Supporting Files */,
@@ -221,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB48A6221B4ED32F004632CC /* Main.storyboard in Resources */,
 				EB48A63D1B4ED3BD004632CC /* RegistrationViewController.xib in Resources */,
 				EB48A6271B4ED32F004632CC /* LaunchScreen.xib in Resources */,
 				EB48A6451B4EDED0004632CC /* ProfileViewController.xib in Resources */,
@@ -269,14 +265,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EB48A6201B4ED32F004632CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB48A6211B4ED32F004632CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EB48A6251B4ED32F004632CC /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

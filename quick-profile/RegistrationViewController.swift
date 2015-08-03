@@ -117,6 +117,9 @@ class RegistrationViewController: UIViewController {
         profile.firstName = firstNameTextField.text
         profile.lastName = lastNameTextField.text
         if (profile.valid()) {
+            let navigationController = self.presentingViewController! as? UINavigationController
+            let controller = navigationController?.topViewController as? ProfileViewController
+            controller!.profile = profile
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
             let alertController = UIAlertController(title: "Error", message: "Username must not be blank", preferredStyle: UIAlertControllerStyle.Alert)

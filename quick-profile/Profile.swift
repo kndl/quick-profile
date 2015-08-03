@@ -8,18 +8,17 @@
 
 import UIKit
 
-class Profile: NSObject {
-    let username: String
-    let password: String
-    let firstName: String!
-    let lastName: String!
+struct Profile {
+    var username: String
+    var password: String
+    var firstName: String!
+    var lastName: String!
     
     init(username: String, password: String, firstName: String!, lastName: String!) {
         self.username = username
         self.password = password
         self.firstName = firstName
         self.lastName = lastName
-        super.init()
     }
     
     func valid() -> Bool {

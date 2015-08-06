@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Profile: NSObject {
+struct Profile {
     var username: String
     var password: String
     var firstName: String!
@@ -19,7 +19,6 @@ class Profile: NSObject {
         self.password = password
         self.firstName = firstName
         self.lastName = lastName
-        super.init()
     }
     
     func valid() -> Bool {

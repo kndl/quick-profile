@@ -97,8 +97,8 @@ class RegistrationViewController: UIViewController {
     }
     
     func signUp() {
-        let profile = Profile(username: usernameTextField.text,
-            password: passwordTextField.text,
+        let profile = Profile(username: usernameTextField.text!,
+            password: passwordTextField.text!,
             firstName: firstNameTextField.text,
             lastName: lastNameTextField.text
         )
@@ -113,10 +113,13 @@ class RegistrationViewController: UIViewController {
     }
     
     func saveProfile() {
-        profile.username = usernameTextField.text
+        profile.username = usernameTextField.text!
         profile.firstName = firstNameTextField.text
         profile.lastName = lastNameTextField.text
         if (profile.valid()) {
+            let navigationController = self.presentingViewController! as? UINavigationController
+            let controller = navigationController?.topViewController as? ProfileViewController
+            controller!.profile = profile
             self.dismissViewControllerAnimated(true, completion: nil)
         } else {
             let alertController = UIAlertController(title: "Error", message: "Username must not be blank", preferredStyle: UIAlertControllerStyle.Alert)
